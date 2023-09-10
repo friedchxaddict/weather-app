@@ -28,6 +28,12 @@ function Inputs({ setQuery, units, setUnits }) {
     }
   };
 
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      if (city !== "") setQuery({ q: city });
+    }
+  }
+
   return (
     <div className="flex flex-row justify-center my-6">
       <div
@@ -41,11 +47,13 @@ function Inputs({ setQuery, units, setUnits }) {
           className="ml-5 md:ml-0 text-base md:text-xl font-light p-2 w-full shadow-xl focus: outline-none
             capitalize placeholder:lowercase rounded-md"
           placeholder="Search for city..."
+          onKeyDown={handleKeyDown}
         />
         <UilSearch
           size={25}
           className="text-white cursor-pointer transition ease-out hover:scale-125"
           onClick={handleSearchClick}
+          onKeyDown={(e) => (e.key === "Enter" ? handleSearchClick : "")}
         />
         <UilLocationPoint
           size={25}
