@@ -31,9 +31,10 @@ function App() {
     return "from-yelllow-700 to orange-700";
   };
 
+  console.log(weather);
   return (
     <div
-      className={`mx-auto max-w-screen-md mt-0 md:mt-5 py-5 px-4 md:px-32 bg-gradient-to-br 
+      className={`mx-auto max-w-screen-md mt-0 xl:mt-5 py-5 px-4 md:px-32 bg-gradient-to-br 
     from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
       <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
