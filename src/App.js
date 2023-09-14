@@ -31,7 +31,6 @@ function App() {
     return "from-yelllow-700 to orange-700";
   };
 
-  console.log(weather);
   return (
     <div
       className={`mx-auto max-w-screen-md mt-0 xl:mt-5 py-5 px-4 md:px-32 bg-gradient-to-br 
